@@ -40,6 +40,7 @@ namespace LibraryManagement.Controllers
                     Random rnd = new Random();
                     int requestCode = rnd.Next(10000000, 99999999);
 
+                    //This datgabase calss is under review
                    result = _context.Database.
                         ExecuteSqlCommand(
                        "[dbo].[InsertBookCheckOutRequest] @bookId = {0}, @userId = {1}, @RCode = {2}",
